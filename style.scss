@@ -1,0 +1,280 @@
+// Cors de la page 
+
+html
+{
+    width: 320px;
+    margin: auto;
+}
+
+ul {
+    
+    margin-top: -4px;
+   & li
+    {
+        list-style-type: none;
+        
+    }
+}
+// Heading
+
+h1
+{
+    padding-left: 16px;
+}
+
+h3
+{
+}
+
+// Variables
+
+$color-primary:#ECEBEC;
+$color-secondary:#D17DD3;
+$text-color:white;
+$height:250px;
+$border: 1px solid $color-primary;
+
+@mixin border{
+    border:$border;
+    border-radius: 1rem;
+    box-shadow: 3px 2px darken($color: $color-primary, $amount: 10%) ;    
+    background-color: white;
+    width: 90%;
+    
+}
+
+@mixin btn{
+    background-color: #D17DD3;
+    width: 65%;
+    padding: 1px;
+    margin: auto;
+    color: $text-color;
+    border-radius: 5rem;
+    font-weight: bold;
+    }
+
+@mixin function ($color) {
+    background-color: $color-primary;
+    border-radius: 1rem;
+    width: 95%;
+    padding: 10px;
+    margin-top: 12px;
+    font-weight: bold;
+    border: $border;
+}
+   
+@mixin figure
+{
+    border-radius: 10px;
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    background-color: white;
+    margin: auto;
+    margin-top: 12px;  
+    box-shadow: 3px 5px darken($color: $color-primary, $amount: 5%) 
+     
+}
+
+
+
+// Liens
+
+a:link
+{
+    text-decoration: none;
+}
+
+// Header
+
+.header
+{
+    background-color: $color-primary;
+    text-align: center;
+    min-height: 300px;
+}
+
+.logo
+{
+    width: 100%;
+    background-color: white;
+    
+        &_ohmyfood
+        {    
+            max-width: 50%;
+            height: auto;    
+            
+            
+
+            &_invert{
+                height: 1rem;   
+                margin-left: 35px; 
+                margin-top: 30px;
+                
+                    }                            
+        }
+}
+
+.localisation
+{
+    display: flex;
+    justify-content: center; 
+    background-color: darken($color: $color-primary, $amount: 10%);  
+    border-top: 3px solid darken($color: $color-primary, $amount:20%);
+}
+
+// Boutons
+
+
+
+.btn--exploration
+{
+    @include btn;
+}
+
+// Partie fonctionnement
+
+.fonc
+{
+    background-color: $color-secondary;
+    border-radius: 1px;
+    padding: 0.3rem ;
+}
+
+
+
+ol {
+    
+    & li{
+        
+        border:$border;
+        @include function($color-primary);
+        text-align:center;      
+        }   
+}
+
+// Logo externes
+.fas
+{
+    margin-right: 8px;
+}
+
+.fas.fa-map-marker-alt
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 12px;
+}
+
+.far.fa-heart
+{
+    float: right;
+    margin-right: 8px;   
+    
+    &:hover{
+        background-color: $color-secondary;       
+    }
+}
+
+
+// Restaurants
+
+
+
+.restaurant
+{
+    @include figure;
+
+        &_available
+        {
+            width: 100%;
+            background-color: $color-primary;
+            padding-top: 20px;
+            padding-bottom: 40px;
+            margin-top: 50px;    
+        }
+
+        &_description
+            {
+            font-size: 1rem;
+            line-height: 4px;
+            padding-left: 8px;
+            justify-content: center;   
+            position: relative;                       
+            }
+        &_overview
+            {       
+            width: 100%;
+            height: 65%;      
+            }
+}
+
+
+.footer
+{
+    margin: auto;
+    width: 100%;
+    background-color: darken($color: $color-primary, $amount: 70%);
+    color: white;
+    line-height: 30px;
+    padding-bottom: 20px;
+    position: relative;  
+    
+}
+
+// Page 2
+
+.restaurant_page_verview
+{
+    max-width:95% ;
+    
+}
+
+.restaurant{
+
+
+    &_heading{
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }    
+    &_menu
+    { 
+        background-color: $color-primary;
+        width: 100%;
+        padding-bottom: 80px;
+        
+
+        &_plate{
+            display: flex;
+            justify-content: space-between;
+            @include border;
+            padding-left: 8px;
+            align-items:flex-end;
+            margin: auto;
+            margin-top: 12px;
+            
+            &--heading{
+                font-weight: bold;
+                    }        
+                }
+    }
+
+    &_price{
+        padding-right: 8px;
+     
+    }
+    
+}
+
+
+
+
+.btn--order
+{
+    @include btn;
+    text-align: center;
+    margin-top: 40px;
+    
+}

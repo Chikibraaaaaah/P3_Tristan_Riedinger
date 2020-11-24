@@ -1,72 +1,179 @@
 html {
   width: 320px;
+  margin: auto;
 }
 
-body {
-  width: 95%;
+ul {
+  margin-top: -4px;
+}
+ul li {
+  list-style-type: none;
+}
+
+h1 {
+  padding-left: 16px;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 .header {
+  background-color: #ECEBEC;
   text-align: center;
+  min-height: 300px;
+}
+
+.logo {
+  width: 100%;
+  background-color: white;
+}
+.logo_ohmyfood {
+  max-width: 50%;
+  height: auto;
+}
+.logo_ohmyfood_invert {
+  height: 1rem;
+  margin-left: 35px;
+  margin-top: 30px;
 }
 
 .localisation {
   display: flex;
-  background-color: grey;
-  width: 95%;
   justify-content: center;
+  background-color: #d3d1d3;
+  border-top: 3px solid #bab7ba;
 }
 
-.btn {
-  background-color: pink;
-  width: 60%;
-  margin: auto;
-  border-radius: 5rem 5rem;
+.btn--exploration {
+  background-color: #D17DD3;
+  width: 65%;
   padding: 1px;
+  margin: auto;
+  color: white;
+  border-radius: 5rem;
+  font-weight: bold;
 }
 
-ol {
-  width: 95%;
-  margin-top: 12px;
-  padding: 10px;
+.fonc {
+  background-color: #D17DD3;
+  border-radius: 1px;
+  padding: 0.3rem;
 }
+
 ol li {
-  border: 3px solid red;
-  width: 100%;
-}
-
-#restaurant {
-  width: 100%;
-}
-
-.restaurants_dispos {
-  width: 100%;
+  border: 1px solid #ECEBEC;
+  background-color: #ECEBEC;
   border-radius: 1rem;
-  border: 3px solid red;
-  position: relative;
+  width: 95%;
+  padding: 10px;
+  margin-top: 12px;
+  font-weight: bold;
+  border: 1px solid #ECEBEC;
+  text-align: center;
 }
 
-.apercu_restaurant {
-  overflow: hidden;
-  width: 100%;
-  height: 200px;
-  border-radius: 1rem 1rem 0rem 0rem;
+.fas {
+  margin-right: 8px;
 }
 
-.description_restaurant {
-  height: 30%;
-  position: relative;
-  line-height: 6px;
+.fas.fa-map-marker-alt {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 12px;
 }
 
 .far.fa-heart {
-  position: absolute;
-  right: 15px;
-  top: 5px;
+  float: right;
+  margin-right: 8px;
 }
 .far.fa-heart:hover {
-  background-color: pink;
-  cursor: pointer;
+  background-color: #D17DD3;
+}
+
+.restaurant {
+  border-radius: 10px;
+  width: 90%;
+  height: 200px;
+  overflow: hidden;
+  background-color: white;
+  margin: auto;
+  margin-top: 12px;
+  box-shadow: 3px 5px #e0dee0;
+}
+.restaurant_available {
+  width: 100%;
+  background-color: #ECEBEC;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 50px;
+}
+.restaurant_description {
+  font-size: 1rem;
+  line-height: 4px;
+  padding-left: 8px;
+  justify-content: center;
+  position: relative;
+}
+.restaurant_overview {
+  width: 100%;
+  height: 65%;
+}
+
+.footer {
+  margin: auto;
+  width: 100%;
+  background-color: #3a383a;
+  color: white;
+  line-height: 30px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.restaurant_page_verview {
+  max-width: 95%;
+}
+
+.restaurant_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant_menu {
+  background-color: #ECEBEC;
+  width: 100%;
+  padding-bottom: 80px;
+}
+.restaurant_menu_plate {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ECEBEC;
+  border-radius: 1rem;
+  box-shadow: 3px 2px #d3d1d3;
+  background-color: white;
+  width: 90%;
+  padding-left: 8px;
+  align-items: flex-end;
+  margin: auto;
+  margin-top: 12px;
+}
+.restaurant_menu_plate--heading {
+  font-weight: bold;
+}
+.restaurant_price {
+  padding-right: 8px;
+}
+
+.btn--order {
+  background-color: #D17DD3;
+  width: 65%;
+  padding: 1px;
+  margin: auto;
+  color: white;
+  border-radius: 5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
