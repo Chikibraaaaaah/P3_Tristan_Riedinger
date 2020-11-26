@@ -18,10 +18,15 @@ a:link {
   text-decoration: none;
 }
 
+.fas.fa-arrow-left {
+  float: left;
+  margin-top: 6px;
+}
+
 .header {
-  background-color: #ECEBEC;
+  background-color: #F3F3F3;
   text-align: center;
-  min-height: 300px;
+  padding-bottom: 50px;
 }
 
 .logo {
@@ -41,36 +46,45 @@ a:link {
 .localisation {
   display: flex;
   justify-content: center;
-  background-color: #d3d1d3;
-  border-top: 3px solid #bab7ba;
+  background-color: #dadada;
+  border-top: 3px solid silver;
 }
 
-.btn--exploration {
+.btn {
   background-color: #D17DD3;
-  width: 65%;
   padding: 1px;
   margin: auto;
   color: white;
   border-radius: 5rem;
   font-weight: bold;
-}
-
-.fonc {
-  background-color: #D17DD3;
-  border-radius: 1px;
-  padding: 0.3rem;
-}
-
-ol li {
-  border: 1px solid #ECEBEC;
-  background-color: #ECEBEC;
-  border-radius: 1rem;
-  width: 95%;
-  padding: 10px;
-  margin-top: 12px;
-  font-weight: bold;
-  border: 1px solid #ECEBEC;
+  width: 65%;
   text-align: center;
+  margin-top: 50px;
+}
+
+.function {
+  border-radius: 1rem;
+  box-shadow: 4px 8px 4px #dadada;
+  background-color: white;
+  width: 90%;
+  margin-top: 16px;
+  padding: 1rem;
+  background-color: #F3F3F3;
+}
+.function:nth-child(4) {
+  background-color: #ecc9ed;
+}
+.function .fas {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.function_list {
+  margin-left: -22px;
+  background-color: #ac3baf;
+  color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 1rem;
 }
 
 .fas {
@@ -83,14 +97,6 @@ ol li {
   margin-right: 12px;
 }
 
-.far.fa-heart {
-  float: right;
-  margin-right: 8px;
-}
-.far.fa-heart:hover {
-  background-color: #D17DD3;
-}
-
 .restaurant {
   border-radius: 10px;
   width: 90%;
@@ -99,39 +105,80 @@ ol li {
   background-color: white;
   margin: auto;
   margin-top: 12px;
-  box-shadow: 3px 5px #e0dee0;
+  box-shadow: 3px 5px #e6e6e6;
+}
+.restaurant_header {
+  text-align: center;
+}
+.restaurant .nouveau {
+  background-color: #16b84e;
+  width: 20%;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding: 5px;
 }
 .restaurant_available {
   width: 100%;
-  background-color: #ECEBEC;
+  background-color: #F3F3F3;
   padding-top: 20px;
   padding-bottom: 40px;
   margin-top: 50px;
+}
+.restaurant_available_listed {
+  position: relative;
 }
 .restaurant_description {
   font-size: 1rem;
   line-height: 4px;
   padding-left: 8px;
-  justify-content: center;
+  text-align: justify;
   position: relative;
 }
 .restaurant_overview {
   width: 100%;
   height: 65%;
 }
+.restaurant_menu {
+  border-radius: 30px 30px 0px 0px;
+  padding-bottom: 50px;
+}
+.restaurant_page_description {
+  position: relative;
+  z-index: 1;
+  margin-top: -50px;
+}
+.restaurant_page_figure {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+figure {
+  margin: auto;
+}
+
+.far.fa-heart {
+  float: right;
+  margin-right: 8px;
+  color: #D17DD3;
+}
+.far.fa-heart:hover {
+  background-color: #D17DD3;
+}
 
 .footer {
   margin: auto;
   width: 100%;
-  background-color: #3a383a;
+  background-color: #414141;
   color: white;
-  line-height: 30px;
+  line-height: 25px;
   padding-bottom: 20px;
   position: relative;
 }
 
-.restaurant_page_verview {
-  max-width: 95%;
+.restaurant_page_overview {
+  width: 100%;
 }
 
 .restaurant_heading {
@@ -140,16 +187,14 @@ ol li {
   justify-content: space-between;
 }
 .restaurant_menu {
-  background-color: #ECEBEC;
+  background-color: #F3F3F3;
   width: 100%;
-  padding-bottom: 80px;
 }
 .restaurant_menu_plate {
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ECEBEC;
   border-radius: 1rem;
-  box-shadow: 3px 2px #d3d1d3;
+  box-shadow: 4px 8px 4px #dadada;
   background-color: white;
   width: 90%;
   padding-left: 8px;
@@ -163,17 +208,14 @@ ol li {
 .restaurant_price {
   padding-right: 8px;
 }
-
-.btn--order {
-  background-color: #D17DD3;
-  width: 65%;
-  padding: 1px;
-  margin: auto;
-  color: white;
-  border-radius: 5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 40px;
+.restaurant_page {
+  width: 100%;
+  font-size: 0.7em;
+}
+.restaurant_page h2 {
+  font-size: 0.8em;
+  padding-left: 12px;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
