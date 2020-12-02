@@ -1,0 +1,455 @@
+// Cors de la page 
+
+html
+{
+    width: 320px;
+    margin: auto;
+}
+
+ul {
+    
+    margin-top: -4px;
+   & li
+    {
+        list-style-type: none;
+        
+        
+    }
+}
+
+
+// Heading
+
+h1
+{
+    padding-left: 16px;
+    font-size: 2em;
+    font-family: 'Sansita Swashed', cursive;
+}
+
+.fas.fa-heart{
+    color: red;
+    display: none;
+}
+
+
+// Variables
+
+$color-primary:#F3F3F3;
+$color-secondary:#D17DD3;
+$color-third:#8FD2C3 ;
+$text-color:white;
+$height:250px;
+$font-size:1em;
+
+
+@mixin field{    
+    border-radius: 1rem;
+    box-shadow: 4px 8px 4px darken($color: $color-primary, $amount: 10);    
+    background-color: white;
+    width: 90%;    
+}
+
+@mixin btn{
+    background-color: #D17DD3;  
+    padding: 1px;
+    margin: auto;
+    color: $text-color;
+    border-radius: 5rem;
+    font-weight: bold;
+    width: 65%;
+}
+
+@mixin figure
+{
+    border-radius: 10px;
+    width: 90%;
+    height: 200px;
+    overflow: hidden;
+    background-color: white;
+    margin: auto;
+    margin-top: 12px;  
+    box-shadow: 3px 5px darken($color: $color-primary, $amount: 5%) 
+     
+}
+
+// Liens
+
+a:link
+{
+    text-decoration: none;
+}
+
+// Header
+
+.fas.fa-arrow-left
+{
+    float: left;
+    margin-top: 6px;
+}
+
+.header
+{
+    background-color: $color-primary;
+    text-align: center;
+    padding-bottom: 50px;
+    
+}
+
+.logo
+{
+    width: 100%;
+    background-color: white;
+    
+        &_ohmyfood
+        {    
+            max-width: 50%;
+            height: auto;  
+              
+            &_invert{
+                height: 1rem;   
+                margin-left: 35px; 
+                margin-top: 30px;
+                    }                            
+        }
+}
+
+.localisation
+{
+    display: flex;
+    justify-content: center; 
+    background-color: darken($color: $color-primary, $amount: 10%);  
+    border-top: 3px solid darken($color: $color-primary, $amount:20%);
+}
+
+// Boutons
+
+.btn--order
+{
+    @include btn;
+    text-align: center;
+    margin-top: 35px;  
+    width: 45%;
+    transform: scale(1);
+    transition: transform 200ms linear;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+// Partie fonctionnement
+
+.function{
+    
+    @include field;
+    margin-top: 16px;
+    padding: 1rem;
+    background-color: $color-primary;
+    
+    &:nth-child(4){
+        background-color: lighten($color: $color-secondary, $amount: 20%);    
+    }
+
+    & .fas{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    &_list{
+        margin-left: -22px;    
+        background-color:darken($color: $color-secondary, $amount: 20) ;
+        color: white;
+        padding-left: 4px;
+        padding-right: 4px;
+        border-radius: 1rem;        
+    }
+}
+
+// Logo externes function
+
+.fas
+{
+    margin-right: 8px;
+}
+
+.fas.fa-map-marker-alt
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 12px;
+}
+
+// Restaurants
+
+.restaurant
+{
+    @include figure;
+
+    &_header
+    {
+        text-align: center;
+    }
+    .nouveau{
+        background-color: $color-third;
+        width: 20%;
+        position: absolute;
+        top: 20px;right: 30px;
+        padding:5px;
+    }
+
+    &_available
+    {
+        width: 100%;
+        background-color: $color-primary;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        margin-top: 50px;    
+
+            &_listed{
+                position: relative;
+            }
+    }
+
+    &_description
+        {
+        font-size: 1rem;
+        line-height: 4px;
+        padding-left: 8px;
+        text-align: justify; 
+        position: relative;                       
+        }
+    &_overview
+        {       
+        width: 100%;
+        height: 65%;      
+        }
+
+        &_menu{
+            border-radius: 30px 30px 0px 0px;    
+            padding-bottom: 50px;                         
+        }
+
+        &_page{
+            &_description{
+                position: relative;
+                z-index: 1;
+                margin-top: -50px;
+            }
+
+            &_figure{
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                
+            }
+        }
+}
+figure
+{
+    
+    margin: auto;
+}
+
+// Logo externes restaurant
+
+.far.fa-heart
+{
+    float: right;
+    margin-right: 8px;   
+    color:$color-secondary;
+    
+    &:hover{
+        background-color: $color-secondary;       
+    }
+}
+
+.footer
+{
+    margin: auto;
+    width: 100%;
+    background-color: darken($color: $color-primary, $amount: 70%);
+    color: white;
+    line-height: 25px;
+    padding-bottom: 20px;
+    position: relative;    
+}
+
+// Page 2 / 3 / 4 / 5 
+
+.restaurant_page_overview
+{
+    width:100% ;
+}
+
+.restaurant_heading
+{
+    padding-top: 16px;
+}
+
+
+
+.soulign{
+    border-bottom: 2px solid $color-third;
+    width: 30px;
+    margin-left: 12px;
+}
+.restaurant{
+
+    &_page{
+        width: 100%;
+        font-size: 0.7em;
+
+        & h2{
+            font-size: 0.8em;
+            padding-left: 12px;
+            margin-top: 30px;
+            
+            
+           
+        }
+    } 
+
+    &_heading{   
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+       
+    &_menu
+    { 
+        background-color: $color-primary;
+        width: 100%;
+    }
+
+    &_plate{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include field;
+        padding-left: 8px;
+        margin: auto;
+        margin-top: 12px;
+
+        &--heading{
+            font-weight: bold;
+        } 
+
+        &--description{
+            width: 80%;
+        }
+
+        &--price{
+            width: 10%;
+            transform: translate(20px);
+            transition: transform 600ms linear;
+        }
+
+        .animation{
+            width: 10%;
+            height: 100%;
+            background-color: red;
+
+            .fas.fa-check-circle{   
+                transform: rotate(-1turn) scale(0);
+                transform-origin: right;
+                transition: transform 600ms linear;
+            }
+        }
+
+
+        &:hover{
+            .animation{      
+                align-items: baseline;
+            }
+
+            .fas.fa-check-circle{
+                transform: rotate(0turn) scale(1);
+                
+            }
+        }     
+    }
+}
+
+
+.restaurant_plate:hover .restaurant_plate--price{
+    
+    transform: translate(0px)
+}
+
+
+
+@mixin border {
+    width: 90%;
+    margin-top: 12px;
+    border-radius: 10px;
+    background-color:lighten($color: $color-primary, $amount: 5%);
+    box-shadow: 4px 6px 4px darken($color: $color-primary, $amount: 10);   
+}
+
+.restaurant_plate2{
+
+    @include border;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 8px;
+    line-height: 14px;
+    font-size: 1.2em;
+  
+      
+    &--description{
+        width: 80%;   
+    }
+
+    &--price{
+        width: 10%;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+        transform: translateX(20px);
+        transition: transform 600ms linear;
+        
+        .tarace{
+            margin-top: 60%
+        }       
+    }
+
+    &--animation{
+        width: 15%;
+        background-color:$color-third;
+        border-radius: 0px 10px 10px 0px;
+        position: relative;
+        transform: scale(0);
+        transition: transform 600ms linear;
+        transform-origin: right;
+        
+    }
+
+    .fas.fa-check-circle{
+        position: absolute;
+        left: 40%;
+        top:40%;
+        transform: rotate(0turn);
+        transition: transform 800ms ease-in;  
+        color: white;      
+    }    
+}
+
+.restaurant_plate2:hover .restaurant_plate2--price
+{
+    transform: translate(0px);
+}
+
+.restaurant_plate2:hover .restaurant_plate2--animation
+{
+    transform: scale(1);
+}
+
+.restaurant_plate2:hover .fas.fa-check-circle{
+    transform: rotate(1turn);
+}
+
+
+
+

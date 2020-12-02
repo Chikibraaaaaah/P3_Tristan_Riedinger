@@ -1,0 +1,73 @@
+html {
+  width: 320px;
+  border: 3px solid black;
+  margin: auto;
+}
+
+.restaurant_page {
+  width: 100%;
+}
+
+.restaurant_page_overview {
+  width: 100%;
+}
+
+figure {
+  border-radius: 10px;
+  width: 90%;
+  height: 200px;
+  overflow: hidden;
+  background-color: white;
+  margin: auto;
+  margin-top: 12px;
+  box-shadow: 3px 5px #e6e6e6;
+}
+
+.restaurant_menu_plate {
+  display: flex;
+  border: 3px solid red;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+  border-radius: 1rem;
+  box-shadow: 4px 8px 4px #dadada;
+  background-color: white;
+  justify-content: space-around;
+}
+.restaurant_menu_plate--price {
+  margin-top: auto;
+  width: 10%;
+  transform: translateX(20px);
+  transition: transform 450ms linear;
+}
+.restaurant_menu_plate--description {
+  line-height: 8px;
+  width: 80%;
+}
+.restaurant_menu_plate .animation_check {
+  width: 11%;
+  transform: scale(0);
+  transition: transform 450ms linear;
+  transform-origin: right;
+  background-color: red;
+}
+.restaurant_menu_plate .fas.fa-check-circle {
+  padding-top: 80%;
+  padding-left: 30%;
+  transform: rotate(1turn);
+  transition: transform 650ms linear;
+  transform-origin: right;
+}
+.restaurant_menu_plate:hover .animation_check {
+  transform: scale(1);
+}
+.restaurant_menu_plate:hover .animation_check .fas.fa-check-circle {
+  transform: rotate(0turn);
+  transition: transform 450ms linear;
+}
+
+.restaurant_menu_plate:hover .restaurant_menu_plate--price {
+  transform: translateX(0px);
+}
+
+/*# sourceMappingURL=style.css.map */

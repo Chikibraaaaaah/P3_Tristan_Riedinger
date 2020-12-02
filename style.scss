@@ -285,9 +285,7 @@ figcaption
         background-color: $color-secondary;       
     }
 
-    
 }
-
 
 
 .footer
@@ -299,56 +297,31 @@ figcaption
     line-height: 25px;
     padding-bottom: 20px;
     position: relative;  
-    
-    
 }
+
+
+
+
+
 
 // Page 2
 
 .restaurant_page_overview
 {
     width:100% ;
-    
 }
 
 .restaurant{
 
-
-    &_heading{
-        
+    &_heading
+    {
         display: flex;
         align-items: center;
         justify-content: space-between;
-    }    
-    &_menu
-    { 
-        background-color: $color-primary;
-        width: 100%;
-        
-        
-        
+    } 
 
-        &_plate{
-            display: flex;
-            justify-content: space-between;
-            @include field;
-            padding-left: 8px;
-            align-items:flex-end;
-            margin: auto;
-            margin-top: 12px;
-            
-            &--heading{
-                font-weight: bold;
-                    }        
-                }
-    }
-
-    &_price{
-        padding-right: 8px;
-     
-    }
-
-    &_page{
+    &_page
+    {
         width: 100%;
         font-size: 0.7em;
 
@@ -357,16 +330,114 @@ figcaption
             padding-left: 12px;
             margin-top: 20px;
         }
-
-        &_overview{
-            
-          
-        }
     }
-    
+
+    &_menu
+    { 
+        background-color: $color-primary;
+        width: 100%;    
+               
+        &_plate
+        {
+            display: flex;
+            justify-content: space-between;
+            @include field;
+            padding-left: 8px;
+            transform: scale(1);
+            margin: auto;
+            margin-top: 12px;
+            
+            &--heading
+            {
+                font-weight: bold;
+            }        
+        }
+            &_price{
+                padding-right: 8px;
+                
+            }
+    }./dart-sass
 }
 
+.fas.fa-check-circle{
+    transform: scale(0) rotate(-240deg);
+    transition: transform 600ms ease-in;
+    transform-origin: right;
+}
+.restaurant_menu_plate{
+    &:hover{
+        .animation{
 
+            
+            &_check{
+                
+                transform: scale(1);
+                transition: transform 2000ms linear;
+                transform-origin: right;
+                
+            }
+        }
+        .fas.fa-check-circle{
+            transform: scale(1) rotate(0);
 
+        }
+    }
+}
 
+.animation{
+    display: flex;
+    align-items: center;
 
+    &_check{
+        
+        background-color: green;
+        transform: scale(0);
+        
+    }
+}
+
+.test_restaurant_menu_plate{
+    display: flex;
+    justify-content: space-between;    
+    margin: auto;
+    @include field;
+    padding-left: 4px;
+    padding-right: 4px;
+    align-items: center;
+    
+    &:hover{
+
+        .test_restaurant_menu_price{
+            transform: translateX(-2vw);
+            transition: transform 800ms linear;           
+        }
+
+        .anim{
+
+            transform: translateX(-2vw) scale(1) ;
+                transform-origin: right;
+                
+            .fas.fa-check-circle{
+                transform: scale(1);
+                transform-origin: right;
+                transition: transform 800ms linear;
+            }
+        }
+    }
+}
+
+.test_animation_check{
+    display: flex;  
+}
+
+.test_restaurant_menu_price{
+    transform: translateX(0);
+}
+
+.anim{
+    transform:  translateX(0) scale(0);
+    transform-origin: right 50%;
+    transition: transform 850ms ease-in-out;
+    background-color: green;  
+}
+   
