@@ -5,8 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content="OhMyFood. Service de livraison de plats cuisinés dans la France entière. Un large choix de spécialités pour votre plus grand plaisir.">
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" media="screen and (min-width:1280px)" href="desktop.css" />
-        <link rel="stylesheet" media="screen and (min-width:768px) and (max-width : 1280px)"  href="tablette.css" />
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
         <script src="https://kit.fontawesome.com/549ebc5e13.js" crossorigin="anonymous"></script>
         <title>OhMyFood</title>
@@ -14,27 +12,28 @@
     <body>
 
         <header>
-            <div class="header">
+            <div class="header"> 
 
-                                 
                     <a href="#">
                         <div class="logo">
                             <img src="maquettes_ohmyfood/images/logo/ohmyfood.png" alt="ohmyfood" title="OhMyFood" class="logo_ohmyfood"/>
                         </div>
                     </a>                               
                 
-
-                <div class="localisation">
+                <div class="localisation"> 
                     <i class="fas fa-map-marker-alt"></i>
                     <p>Paris, Belleville</p>
                 </div>
+
                 <nav>
                     <div class="navigation">
                         <h2>Réservez le menu qui vous convient</h2>
                         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-                        <div class="btn--exploration">
-                            <p>Explorer nos restaurants</p>
-                        </div>
+                        <a href="#">
+                            <div class="btn--exploration">
+                                <p>Explorer nos restaurants</p>
+                            </div>
+                        </a>
                     </div>
                 </nav>
 
@@ -60,7 +59,7 @@
         <section class="restaurant_available">
             <h1>Restaurants</h1>
 
-            <a href="page4.html">
+            <a href="page4.html" class="link_page">
                 <article class="restaurant_available_listed">                 
                     <figure class="restaurant">
                         <img 
@@ -69,7 +68,10 @@
                         src="maquettes_ohmyfood/images/restaurants/gout_mobile.jpg" alt="La Palette du Goût" title="La Palette du Goût" class="restaurant_overview">
                         
                         <figcaption class="restaurant_description">
-                            <h3>La palette du goût<i class="far fa-heart"></i></h3>
+                            <h3>La palette du goût</h3>
+                                <div class="like">
+                                    <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                                </div>
                             Ménilmontant                            
                         </figcaption>
                         <div class="nouveau">Nouveau</div>
@@ -86,7 +88,10 @@
                         sizes="90vw"
                         src="maquettes_ohmyfood/images/restaurants/enchantee_mobile.jpg" alt="La Palette du Goût" title="La Palette du Goût" class="restaurant_overview">                      
                         <figcaption class="restaurant_description">                         
-                            <h3>La note enchantée<i class="far fa-heart"></i></h3>
+                            <h3>La note enchantée</h3>
+                            <div class="like">
+                                <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                            </div>
                             Charonne                            
                         </figcaption>
                         <div class="nouveau">Nouveau</div>
@@ -102,7 +107,10 @@
                         sizes="90vw"
                         src="maquettes_ohmyfood/images/restaurants/francaise_mobile.jpg" alt="La Palette du Goût" title="La Palette du Goût" class="restaurant_overview">        
                         <figcaption class="restaurant_description">
-                            <h3>À la française<i class="far fa-heart"></i></h3>
+                            <h3>À la française</h3>
+                            <div class="like">
+                                <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                            </div>
                             Cité Rouge                            
                         </figcaption>
                     </figure>
@@ -117,34 +125,55 @@
                         sizes="90vw"
                         src="maquettes_ohmyfood/images/restaurants/sens_mobile.jpg" alt="La Palette du Goût" title="La Palette du Goût" class="restaurant_overview"> 
                         <figcaption class="restaurant_description">
-                            <h3>Les délices des sens<i class="far fa-heart"></i></h3>
+                            <h3>Les délices des sens</h3>
+                            <div class="like">
+                                <i class="far fa-heart"></i><i class="fas fa-heart"></i>
+                            </div>
                             Folie-Méricourt
                             
                         </figcaption>
                     </figure>
                 </article>
             </a>
+
     </section>
 
         <footer>
+
             <div class="footer">                
-                <a>
-                    <figure>
-                        <img src="maquettes_ohmyfood/images/logo/ohmyfood_invert.png" alt="ohmyfood" title="OhMyFood" class="logo_ohmyfood_invert"/>
-                    </figure>
-                </a>                             
+                
+                <figure>
+                    <img src="maquettes_ohmyfood/images/logo/ohmyfood_invert.png" alt="ohmyfood" title="OhMyFood" class="logo_ohmyfood_invert"/>
+                </figure>
+                                            
               
                 <ul>
-                    <li>
-                        
-                            <i class="fas fa-store"></i>Proposer un restaurant</li>
-                        
-                    <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
-                    <li>Mentions légales</li>
-                    <li>Contact</li>
+                    <a href="#">
+                        <li>
+                            <i class="fas fa-utensils"></i>
+                            Proposer un restaurant
+                        </li>
+                    </a>
+
+                    <a href="https://www.seenaptic.com/fr/partenariat">
+                        <li>
+                            <i class="fas fa-hands-helping"></i>
+                            Devenir partenaire
+                        </li>
+                    </a>
+
+                    <a href="https://www.service-public.fr/professionnels-entreprises/vosdroits/F31228">
+                        <li>Mentions légales</li>
+                    </a>
+
+                    <a href="mailto:tristanriedinger@gmail.com">
+                        <li>Contact</li>
+                    </a>
+
                 </ul>
             </div>
+
         </footer>
 
-</body>
+    </body>
 </html>

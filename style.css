@@ -12,21 +12,22 @@ ul li {
 
 h1 {
   padding-left: 16px;
-  font-size: 2em;
-}
-
-.fas.fa-heart {
-  color: red;
-  display: none;
+  font-size: 2.2em;
 }
 
 a:link {
   text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  color: white;
 }
 
 .fas.fa-arrow-left {
   float: left;
   margin-top: 6px;
+  color: black;
 }
 
 .header {
@@ -45,8 +46,9 @@ a:link {
 }
 .logo_ohmyfood_invert {
   height: 1rem;
-  margin-left: 35px;
+  margin-left: 13%;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .localisation {
@@ -115,6 +117,10 @@ a:link {
   border-radius: 1rem;
 }
 
+.function:hover span {
+  transform: scale(1.15);
+}
+
 .fas {
   margin-right: 8px;
 }
@@ -123,6 +129,23 @@ a:link {
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 12px;
+}
+
+.restaurant {
+  margin: auto;
+}
+.restaurant:hover {
+  box-shadow: 4px 6px 6px #8FD2C3;
+}
+
+figure {
+  margin: auto;
+}
+
+figcaption {
+  color: black;
+  transform: scale(1);
+  transition: transform 400ms linear;
 }
 
 .restaurant {
@@ -139,6 +162,10 @@ a:link {
 }
 .restaurant_heading {
   font-family: "Sansita Swashed", cursive;
+  padding-top: 16px;
+}
+.restaurant_heading .like {
+  position: relative;
 }
 .restaurant .nouveau {
   background-color: #8FD2C3;
@@ -147,6 +174,7 @@ a:link {
   top: 20px;
   right: 30px;
   padding: 5px;
+  color: black;
 }
 .restaurant_available {
   width: 100%;
@@ -172,29 +200,25 @@ a:link {
 .restaurant_menu {
   border-radius: 30px 30px 0px 0px;
   padding-bottom: 50px;
-}
-.restaurant_page_description {
-  position: relative;
   z-index: 1;
   margin-top: -50px;
-}
-.restaurant_page_figure {
   position: relative;
-  z-index: 2;
+}
+.restaurant_figure {
   width: 100%;
+  z-index: 2;
 }
-
-figure {
-  margin: auto;
+.restaurant_page {
+  width: 100%;
+  font-size: 0.7em;
 }
-
-.far.fa-heart {
-  float: right;
-  margin-right: 8px;
-  color: #D17DD3;
+.restaurant_page h2 {
+  font-size: 1em;
+  padding-left: 12px;
+  margin-top: 30px;
 }
-.far.fa-heart:hover {
-  background-color: #D17DD3;
+.restaurant_page h3 {
+  font-weight: bold;
 }
 
 .footer {
@@ -207,82 +231,21 @@ figure {
   position: relative;
 }
 
-.restaurant_page_overview {
-  width: 100%;
-}
-
-.restaurant_heading {
-  padding-top: 16px;
-}
-
 .soulign {
   border-bottom: 2px solid #8FD2C3;
   width: 30px;
   margin-left: 12px;
 }
 
-.restaurant_page {
+.restaurant_menu {
+  background-color: #F3F3F3;
   width: 100%;
-  font-size: 0.7em;
-}
-.restaurant_page h2 {
-  font-size: 0.8em;
-  padding-left: 12px;
-  margin-top: 30px;
 }
 .restaurant_heading {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.restaurant_menu {
-  background-color: #F3F3F3;
-  width: 100%;
-}
-.restaurant_plate {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 1rem;
-  box-shadow: 4px 8px 4px #dadada;
-  background-color: white;
-  width: 90%;
-  padding-left: 8px;
-  margin: auto;
-  margin-top: 12px;
-}
-.restaurant_plate--heading {
-  font-weight: bold;
-}
-.restaurant_plate--description {
-  width: 80%;
-}
-.restaurant_plate--price {
-  width: 10%;
-  transform: translate(20px);
-  transition: transform 600ms linear;
-}
-.restaurant_plate .animation {
-  width: 10%;
-  height: 100%;
-  background-color: red;
-}
-.restaurant_plate .animation .fas.fa-check-circle {
-  transform: rotate(-1turn) scale(0);
-  transform-origin: right;
-  transition: transform 600ms linear;
-}
-.restaurant_plate:hover .animation {
-  align-items: baseline;
-}
-.restaurant_plate:hover .fas.fa-check-circle {
-  transform: rotate(0turn) scale(1);
-}
-
-.restaurant_plate:hover .restaurant_plate--price {
-  transform: translate(0px);
-}
-
 .restaurant_plate2 {
   width: 90%;
   margin-top: 12px;
@@ -307,9 +270,6 @@ figure {
   transform: translateX(20px);
   transition: transform 600ms linear;
 }
-.restaurant_plate2--price .tarace {
-  margin-top: 60%;
-}
 .restaurant_plate2--animation {
   width: 15%;
   background-color: #8FD2C3;
@@ -319,6 +279,10 @@ figure {
   transition: transform 600ms linear;
   transform-origin: right;
 }
+.restaurant_plate2--heading {
+  font-weight: bold;
+  font-size: 1em;
+}
 .restaurant_plate2 .fas.fa-check-circle {
   position: absolute;
   left: 40%;
@@ -326,6 +290,10 @@ figure {
   transform: rotate(0turn);
   transition: transform 800ms ease-in;
   color: white;
+}
+
+.restaurant_plate:hover .restaurant_plate--price {
+  transform: translate(0px);
 }
 
 .restaurant_plate2:hover .restaurant_plate2--price {
@@ -338,6 +306,28 @@ figure {
 
 .restaurant_plate2:hover .fas.fa-check-circle {
   transform: rotate(1turn);
+}
+
+.like {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.like .fas.fa-heart {
+  display: none;
+}
+.like .far.fa-heart {
+  display: inline-block;
+}
+.like:hover {
+  cursor: pointer;
+}
+.like:hover .fas.fa-heart {
+  display: inline-block;
+  color: #D17DD3;
+}
+.like:hover .far.fa-heart {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,16 +6,15 @@ html
     margin: auto;
 }
 
-ul {
-    
+ul{ 
     margin-top: -4px;
+
    & li
     {
-        list-style-type: none;
-        
-        
+        list-style-type: none; 
     }
 }
+
 
 
 // Heading
@@ -23,14 +22,11 @@ ul {
 h1
 {
     padding-left: 16px;
-    font-size: 2em;
+    font-size: 2.2em;
     
 }
 
-.fas.fa-heart{
-    color: red;
-    display: none;
-}
+
 
 
 // Variables
@@ -71,8 +67,15 @@ $font-size:1em;
     overflow: hidden;
     background-color: white;
     margin-top: 12px;  
-    box-shadow: 3px 5px darken($color: $color-primary, $amount: 5%) 
-     
+    box-shadow: 3px 5px darken($color: $color-primary, $amount: 5%)    
+}
+
+@mixin border {
+    width: 90%;
+    margin-top: 12px;
+    border-radius: 10px;
+    background-color:lighten($color: $color-primary, $amount: 5%);
+    box-shadow: 4px 6px 4px darken($color: $color-primary, $amount: 10);   
 }
 
 // Liens
@@ -80,7 +83,15 @@ $font-size:1em;
 a:link
 {
     text-decoration: none;
+    color: white;
+    
 }
+
+a:visited{
+    color: white;
+}
+
+
 
 // Header
 
@@ -88,6 +99,7 @@ a:link
 {
     float: left;
     margin-top: 6px;
+    color: black;
 }
 
 .header
@@ -110,9 +122,10 @@ a:link
               
             &_invert{
                 height: 1rem;   
-                margin-left: 35px; 
+                margin-left: 13%;
                 margin-top: 30px;
-                    }                            
+                margin-bottom: 20px;
+            }                            
         }
 }
 
@@ -173,8 +186,14 @@ a:link
         color: white;
         padding-left: 4px;
         padding-right: 4px;
-        border-radius: 1rem;        
+        border-radius: 1rem;  
+         
     }
+}
+
+.function:hover span{
+   transform: scale(1.15);
+    
 }
 
 // Logo externes function
@@ -191,30 +210,56 @@ a:link
     margin-right: 12px;
 }
 
-// Restaurants
+// Restaurants page Index
+
+
+.restaurant{
+    margin: auto;
+
+        &:hover{
+           box-shadow: 4px 6px 6px $color-third;
+        }
+}
+
+figure{
+    margin: auto;
+}
+
+figcaption
+{
+    color: black;
+    transform: scale(1);
+    transition: transform 400ms linear;
+}
 
 .restaurant
 {
     @include figure;
+    
 
-    &_header
-    {
+    &_header{
         text-align: center;
     }
 
     &_heading{
         font-family: 'Sansita Swashed', cursive;
+        padding-top: 16px;
+
+        .like{
+            position: relative;
+        }
     }
+
     .nouveau{
         background-color: $color-third;
         width: 20%;
         position: absolute;
         top: 20px;right: 30px;
         padding:5px;
+        color: black;
     }
 
-    &_available
-    {
+    &_available{
         width: 100%;
         background-color: $color-primary;
         padding-top: 20px;
@@ -226,58 +271,52 @@ a:link
             }
     }
 
-    &_description
-        {
+    &_description{
         font-size: 1rem;
         line-height: 4px;
         padding-left: 8px;
         text-align: justify; 
         position: relative;                       
-        }
-    &_overview
-        {       
+    }
+
+    &_overview{       
         width: 100%;
         height: 65%;      
-        }
-
-        &_menu{
-            border-radius: 30px 30px 0px 0px;    
-            padding-bottom: 50px;                         
-        }
-
-        &_page{
-            &_description{
-                position: relative;
-                z-index: 1;
-                margin-top: -50px;
-            }
-
-            &_figure{
-                position: relative;
-                z-index: 2;
-                width: 100%;
-                
-            }
-        }
-}
-figure
-{
-    
-    margin: auto;
-}
-
-// Logo externes restaurant
-
-.far.fa-heart
-{
-    float: right;
-    margin-right: 8px;   
-    color:$color-secondary;
-    
-    &:hover{
-        background-color: $color-secondary;       
     }
+
+    &_menu{
+        border-radius: 30px 30px 0px 0px;    
+        padding-bottom: 50px;   
+        z-index: 1;
+        margin-top: -50px;
+        position: relative;
+    }
+
+    &_figure{
+        width: 100%;
+        z-index: 2;
+    }
+
+    &_page{
+
+        width: 100%;
+        font-size: 0.70em;
+      
+
+        & h2{
+            font-size: 1em;
+            padding-left: 12px;
+            margin-top: 30px;
+        }
+
+        & h3{
+            font-weight: bold;
+        }
+    } 
+
+        
 }
+
 
 .footer
 {
@@ -290,18 +329,7 @@ figure
     position: relative;    
 }
 
-// Page 2 / 3 / 4 / 5 
-
-.restaurant_page_overview
-{
-    width:100% ;
-}
-
-.restaurant_heading
-{
-    padding-top: 16px;
-}
-
+// Restaurant Page 2 / 3 / 4 / 5 
 
 
 .soulign{
@@ -309,146 +337,73 @@ figure
     width: 30px;
     margin-left: 12px;
 }
+
 .restaurant{
-
-    &_page{
-        width: 100%;
-        font-size: 0.7em;
-
-        & h2{
-            font-size: 0.8em;
-            padding-left: 12px;
-            margin-top: 30px;
-            
-            
-           
-        }
-    } 
-
-    &_heading{   
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-       
-    &_menu
-    { 
-        background-color: $color-primary;
-        width: 100%;
-    }
-
-    &_plate{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        @include field;
-        padding-left: 8px;
-        margin: auto;
-        margin-top: 12px;
-
-        &--heading{
-            font-weight: bold;
-        } 
-
-        &--description{
-            width: 80%;
+        
+        &_menu{ 
+            background-color: $color-primary;
+            width: 100%;
         }
 
-        &--price{
-            width: 10%;
-            transform: translate(20px);
-            transition: transform 600ms linear;
+        &_heading{   
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-
-        .animation{
-            width: 10%;
-            height: 100%;
-            background-color: red;
-
-            .fas.fa-check-circle{   
-                transform: rotate(-1turn) scale(0);
-                transform-origin: right;
-                transition: transform 600ms linear;
+    
+        &_plate2{
+            @include border;
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 8px;
+            line-height: 14px;
+            font-size: 1.2em;
+    
+            &--description{
+                width: 80%;  
+               
             }
-        }
 
+            &--price{
+                width: 10%;
+                font-weight: bold;
+                margin-top: 10px;
+                text-align: center;
+                transform: translateX(20px);
+                transition: transform 600ms linear;   
+            }
 
-        &:hover{
-            .animation{      
-                align-items: baseline;
+            &--animation{
+                width: 15%;
+                background-color:$color-third;
+                border-radius: 0px 10px 10px 0px;
+                position: relative;
+                transform: scale(0);
+                transition: transform 600ms linear;
+                transform-origin: right;  
+            }
+
+            &--heading{
+                font-weight: bold;
+                font-size: 1em;   
             }
 
             .fas.fa-check-circle{
-                transform: rotate(0turn) scale(1);
-                
-            }
-        }     
-    }
+                position: absolute;
+                left: 40%;
+                top:40%;
+                transform: rotate(0turn);
+                transition: transform 800ms ease-in;  
+                color: white;      
+            }    
+        }
 }
 
 
 .restaurant_plate:hover .restaurant_plate--price{
     
     transform: translate(0px)
-}
-
-
-
-@mixin border {
-    width: 90%;
-    margin-top: 12px;
-    border-radius: 10px;
-    background-color:lighten($color: $color-primary, $amount: 5%);
-    box-shadow: 4px 6px 4px darken($color: $color-primary, $amount: 10);   
-}
-
-.restaurant_plate2{
-
-    @include border;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 8px;
-    line-height: 14px;
-    font-size: 1.2em;
-  
-      
-    &--description{
-        width: 80%;   
-    }
-
-    &--price{
-        width: 10%;
-        font-weight: bold;
-        margin-top: 10px;
-        text-align: center;
-        transform: translateX(20px);
-        transition: transform 600ms linear;
-        
-        .tarace{
-            margin-top: 60%
-        }       
-    }
-
-    &--animation{
-        width: 15%;
-        background-color:$color-third;
-        border-radius: 0px 10px 10px 0px;
-        position: relative;
-        transform: scale(0);
-        transition: transform 600ms linear;
-        transform-origin: right;
-        
-    }
-
-    .fas.fa-check-circle{
-        position: absolute;
-        left: 40%;
-        top:40%;
-        transform: rotate(0turn);
-        transition: transform 800ms ease-in;  
-        color: white;      
-    }    
 }
 
 .restaurant_plate2:hover .restaurant_plate2--price
@@ -465,6 +420,30 @@ figure
     transform: rotate(1turn);
 }
 
+.like{
+    position: absolute;
+    right: 10px;
+    top:10px;
 
+        .fas.fa-heart{
+            display: none;
+        }
+
+        .far.fa-heart{
+        display: inline-block;
+        }
+
+        &:hover{
+            cursor: pointer;
+
+            .fas.fa-heart{
+                display: inline-block;
+                color: $color-secondary;
+            }
+            .far.fa-heart{
+                display: none;
+            }
+        }
+}
 
 

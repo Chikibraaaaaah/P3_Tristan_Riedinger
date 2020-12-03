@@ -1,8 +1,23 @@
-.like
-{
-    display: flex;
-    flex-direction: column    ;
-
-   
+.test {
+  width: 100px;
+  height: 50px;
+  position: relative;
 }
 
+.fas.fa-heart {
+  display: none;
+}
+
+.far.fa-heart {
+  display: inline-block;
+}
+
+.like:hover .fas.fa-heart {
+  display: inline-block;
+}
+
+.like:hover .far.fa-heart {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
