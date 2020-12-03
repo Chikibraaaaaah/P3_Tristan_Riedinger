@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta name="description" content="OhMyFood. Service de livraison de plats cuisinés dans la France entière. Un large choix de spécialités pour votre plus grand plaisir.">
         <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" media="screen and (min-width:1280px)" href="desktop.css" />
         <link rel="stylesheet" media="screen and (min-width:768px) and (max-width : 1280px)"  href="tablette.css" />
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"> 
@@ -15,7 +18,7 @@
     <body>
 
 
-        <div class="restaurant_page">
+        <section class="restaurant_page">
 
             <div class="restaurant_header">
                 <a href="index.html">
@@ -24,90 +27,213 @@
                 </a>
             </div>
 
-            <figure class="restaurant_page_overview">
-                <img src="maquettes_ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La Palette du Goût" title="La Palette du Goût"  class="restaurant_page_overview">
-            <figcaption class="restaurant_page_description">
+            <figure class="restaurant_page_figure">
+                <img 
+                    srcset="maquettes_ohmyfood/images/restaurants/enchantee_mobile.jpg 320w, maquettes_ohmyfood/images/restaurants/enchantee_ipad.jpg 1024w, maquettes_ohmyfood/images/restaurants/enchantee_desktop.jpg 1440w"
+                    sizes="90vw"
+                    src="maquettes_ohmyfood/images/restaurants/enchantee_mobile.jpg" alt="La note enchantée" title="La note enchantée" class="restaurant_overview">  
+            </figure>   
         
-        <div class="restaurant_menu">
+            <article class="restaurant_menu">
 
-            <div class="restaurant_heading">
-                <h1>La note enchantée</h1>
-                <i class="far fa-heart"></i> 
-             </div>
+                <div class="restaurant_heading">
+                    <h1>La note enchantée</h1>
+                  
+                  <div class="like">  
+                      <i class="fas fa-heart"></i><i class="far fa-heart"></i>
+                  </div>
+                </div>
 
-            <h2>ENTREES</h2>                     
+                <h2>ENTREES</h2> 
+                <div class="soulign"></div>    
                 
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Ravioles de foie gras</span></br>
-                        Accompagnés de leur crème à la truffe</p>                            
-                    <p class="restaurant_menu_price">25€</p> 
-                </div>                       
+                
+
+
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Ravioles de foie gras</span></br>Accompagnés de leur crème à la truffe</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p class="tarace">25€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+                </div>
+                 
             
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Caviar osciètre</span></br>
-                        Sur blini à la farine de blé noir</p>                            
-                    <p class="restaurant_menu_price">35€</p> 
-                </div>    
-                
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Homard et espuma de potiron</span></br>
-                        Mariné aux zestes d'orange</p>                            
-                    <p class="restaurant_menu_price">20€</p> 
-                </div>   
+                <div class="restaurant_plate2">
 
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Foie gras de canard cuit entier</span></br>
-                        Confiture de figue et pain toasté</p>                            
-                    <p class="restaurant_menu_price">35€</p> 
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Caviar osciètre</span></br>Sur blini à la farine de blé noir</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 35€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
                 </div> 
+                
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Homard et espuma de potiron</span></br>Mariné aux zestes d'orange</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 20€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
+                </div>
+
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Foie gras de canard cuit entier</span></br>Confiture de figue et pain toasté</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 35€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
+                </div>
+                
                                
                 <h2>PLATS</h2>
+                <div class="soulign"></div>    
             
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Noix de coquilles Saint-Jacques</span></br>
-                        Sur lit de purée de céleri-rave</p>                            
-                    <p class="restaurant_menu_price">40€</p> 
-                </div>    
-                
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Langoustine poêlée</span></br>
-                        Purée de patate douce</p>                            
-                    <p class="restaurant_menu_price">35€</p> 
-                </div>  
+                <div class="restaurant_plate2">
 
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Mijoté de queue de boeuf</span></br>
-                        Et riz sauvage aux zestes de citron</p>                            
-                    <p class="restaurant_menu_price">44€</p> 
-                </div> 
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Noix de coquilles Saint-Jacques</span></br>Sur lit de purée de céleri-rave</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 40€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
+                </div>   
+                
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Langoustine poêlée</span></br>Purée de patate douce</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 35€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
+                </div>
+
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Mijoté de queue de boeuf</span></br>Et riz sauvage aux zestes de citron</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 44€ </p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
+                </div>
 
                 <h2>DESSERTS</h2>
+                <div class="soulign"></div>    
                 
                 
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Macaron noisette et chocolat</span></br>
-                        Glace au caramel brun et sel de Guérande</p>                            
-                    <p class="restaurant_menu_price">18€</p> 
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Macaron noisette et chocolat</span></br>Glace au caramel brun et sel de Guérande</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 18€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
                 </div>                       
             
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Baba au rhum revisité</span></br>
-                        Avec son coulis de citron</p>                            
-                    <p class="restaurant_menu_price">22€</p> 
-                </div>    
-                
-                <div class="restaurant_menu_plate">
-                    <P><span class="restaurant_menu_plate--heading">Tarte au citron meringuée</span></br>
-                        Déstructurée</p>                            
-                    <p class="restaurant_menu_price">23€</p> 
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Baba au rhum revisité</span></br>Avec son coulis de citron</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 22€</p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
                 </div>  
                 
-                <div class="btn commander">
+                <div class="restaurant_plate2">
+
+                    <div class="restaurant_plate2--description">
+                        <p><span class="restaurant_plate--heading">Tarte au citron meringuée</span></br>Déstructurée</p>  
+                    </div>
+
+                    <div class="restaurant_plate2--price">
+                       <p> 25€ </p>
+                    </div>
+
+                    <div class="restaurant_plate2--animation">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+
+
+                </div>
+                
+                <div class="btn--order">
                     <p>Commander</p>
-                </div>  
-            </figcaption></figure>          
-        </div>
-    </div>
+                </div>   
+
+        </article>
+    </section>
 
 
     <footer>
