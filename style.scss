@@ -50,12 +50,13 @@
 
 // conteneur spinner
 
-#loader-wrapper{
+#loader-container{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+    
 }
 
 // Spinner bar exte
@@ -75,6 +76,8 @@
     -webkit-animation: spin 2s linear 1; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s linear 1; /* Chrome, Firefox 16+, IE 10+, Opera */
     animation-fill-mode: forwards;
+   
+    
 }
 
 // Spinner bar mileu
@@ -596,6 +599,7 @@
     
         &--description {
         width: 80%;
+       
         }
 
         &--heading {
@@ -605,7 +609,7 @@
         &--price {
         width: 10%;
         font-weight: bold;
-        margin-top: 10px;
+        margin-top: 20px;
         text-align: center;
         transform: translateX(0px);
         transition: transform 600ms ease-in;
