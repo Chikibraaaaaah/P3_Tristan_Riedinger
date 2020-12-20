@@ -1,27 +1,9 @@
-    // Cors de la page
-
-    html {
-    width: 320px;
-    margin: auto;
-    }
-
-    body {
-    width: 95%;
-    }
-
-    ul {
-    margin-top: -4px;
-
-    & li {
-        list-style-type: none;
-    }
-    }
-
     // Variables
 
     $color-primary: #f3f3f3;
-    $color-secondary: #d17dd3;
-    $color-third: #8fd2c3;
+    $color-secondary: #9356DC;
+    $color-fourth:#FF79DA;
+    $color-third: #99E2D0;
     $text-color: white;
     $height: 250px;
     $font-size: 1em;
@@ -35,7 +17,7 @@
     }
 
     @mixin btn {
-    background-color: #d17dd3;
+    background-color: $color-fourth;
     margin: auto;
     color: $text-color;
     border-radius: 5rem;
@@ -63,6 +45,160 @@
     box-shadow: 4px 6px 4px darken($color: $color-primary, $amount: 10);
     }
 
+
+// Animation Spinner
+
+// conteneur spinner
+
+#loader-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+// Spinner bar exte
+
+#loader{   
+    display: block;
+    z-index: 1001;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 3px solid transparent;
+    border-top-color: $color-secondary;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear 1; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear 1; /* Chrome, Firefox 16+, IE 10+, Opera */
+    animation-fill-mode: forwards;
+}
+
+// Spinner bar mileu
+
+#loader::before{
+    content: "";
+    position: absolute;
+    height: 135px;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    border: 3px solid transparent;
+    border-top-color: $color-third;
+    border-radius: 50%;
+    -webkit-animation: spin 2s ease-in 1; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s ease-in 1; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+// Spinner bar inté
+
+#loader::after{
+    content: "";
+    position: absolute;
+    height: 115px;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    border: 3px solid transparent;
+    border-top-color:$color-fourth ;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear 1; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear 1; /* Chrome, Firefox 16+, IE 10+, Opera */
+    animation-fill-mode: backwards;
+}
+
+//mouvement rotations
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+                transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+                opacity: 1;
+                animation-fill-mode: forwards;
+              
+    }
+
+    90%{
+        opacity: 0.95;
+    }
+    
+    100% { 
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+                transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+                opacity: 0;
+                animation-fill-mode: forwards;
+              
+        
+     }
+  }
+  @keyframes spin {
+    0%   {  
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+                transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+                opacity: 1;
+                animation-fill-mode: forwards;
+                
+    }   
+
+    90%{
+        opacity: 0.95;
+    }
+    
+    100% { 
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+                transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+                opacity: 0;
+                animation-fill-mode: forwards;
+                
+        
+     }
+  }
+
+// apparition page principale
+
+@keyframes menu{
+    0%{
+        opacity: 0;
+    }
+
+    99%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+#content{
+    animation: menu 3.2s linear;
+}
+
+
+
+   // Cors de la page
+
+    html {
+    width: 320px;
+    margin: auto;
+    }
+
+    body {
+    width: 95%;
+    }
+
+    ul {
+    margin-top: -4px;
+
+    & li {
+        list-style-type: none;
+        
+    }
+    }
+
     // Liens
 
     a:link {
@@ -73,6 +209,29 @@
     a:visited {
     color: white;
     }
+    // animation loader
+
+@keyframes loader {
+  0% {
+    transform: scaleX(1);
+  }
+  15% {
+    transform: scaleX(0.9);
+  }
+  37% {
+    transform: scaleX(0.82);
+  }
+  62% {
+    transform: scaleX(0.8);
+  }
+  80% {
+    transform: scaleX(0.6);
+  }
+  100% {
+    transform: scaleX(0);
+    animation-fill-mode: both;
+  }
+}
 
     // Header phone
 
@@ -260,15 +419,15 @@
         &_listed {
         position: relative;
 
-        .nouveau {
-            background-color: $color-third;
-            width: auto;
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            padding: 5px;
-            color: black;
-        }
+            .nouveau {
+                background-color: $color-third;
+                width: auto;
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                padding: 5px;
+                color: black;
+            }
         }
     }
 
@@ -363,7 +522,7 @@
     }
 
     &_heading {
-        font-family: "Sansita Swashed", cursive;
+        font-family: 'shrikhand',"Sansita Swashed", cursive;
         padding-top: 16px;
         display: flex;
         align-items: center;
@@ -492,16 +651,16 @@
     }
 
 
-    .restaurant_page_plate:active .restaurant_page_plate--price {
+    .restaurant_page_plate:hover .restaurant_page_plate--price {
     transform: translate(-20px);
     }
 
-    .restaurant_page_plate:active .restaurant_page_plate--animation {
+    .restaurant_page_plate:hover .restaurant_page_plate--animation {
     transform: scale(1.1);
    
     }
 
-    .restaurant_page_plate:active .fas.fa-check-circle {
+    .restaurant_page_plate:hover .fas.fa-check-circle {
     transform: rotate(1turn);
     }
 
@@ -790,3 +949,6 @@
         }
     }
 }
+
+
+
