@@ -55,8 +55,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%;
-    
+    width: 100%; 
 }
 
 // Spinner bar exte
@@ -73,11 +72,8 @@
     border: 3px solid transparent;
     border-top-color: $color-secondary;
     border-radius: 50%;
-    -webkit-animation: spin 2s linear 1; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s linear 1; /* Chrome, Firefox 16+, IE 10+, Opera */
     animation-fill-mode: forwards;
-   
-    
 }
 
 // Spinner bar mileu
@@ -92,7 +88,6 @@
     border: 3px solid transparent;
     border-top-color: $color-third;
     border-radius: 50%;
-    -webkit-animation: spin 2s ease-in 1; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s ease-in 1; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
 
@@ -108,42 +103,18 @@
     border: 3px solid transparent;
     border-top-color:$color-fourth ;
     border-radius: 50%;
-    -webkit-animation: spin 2s linear 1; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 3s linear 1; /* Chrome, Firefox 16+, IE 10+, Opera */
     animation-fill-mode: backwards;
 }
 
 //mouvement rotations
 
-@-webkit-keyframes spin {
-    0%   { 
-        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-                transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-                opacity: 1;
-                animation-fill-mode: forwards;
-              
-    }
-
-    90%{
-        opacity: 0.95;
-    }
-    
-    100% { 
-        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-                transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-                opacity: 0;
-                animation-fill-mode: forwards;
-              
-        
-     }
-  }
   @keyframes spin {
     0%   {  
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
                 transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
                 opacity: 1;
-                animation-fill-mode: forwards;
-                
+                animation-fill-mode: forwards;            
     }   
 
     90%{
@@ -154,9 +125,7 @@
         -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
                 transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
                 opacity: 0;
-                animation-fill-mode: forwards;
-                
-        
+                animation-fill-mode: forwards; 
      }
   }
 
@@ -180,13 +149,12 @@
     animation: menu 3.2s linear;
 }
 
-
-
    // Cors de la page
 
     html {
     width: 320px;
     margin: auto;
+    font-size: 0.9em;
     }
 
     body {
@@ -201,7 +169,6 @@
         
     }
     }
-
     // Liens
 
     a:link {
@@ -212,31 +179,8 @@
     a:visited {
     color: white;
     }
-    // animation loader
 
-@keyframes loader {
-  0% {
-    transform: scaleX(1);
-  }
-  15% {
-    transform: scaleX(0.9);
-  }
-  37% {
-    transform: scaleX(0.82);
-  }
-  62% {
-    transform: scaleX(0.8);
-  }
-  80% {
-    transform: scaleX(0.6);
-  }
-  100% {
-    transform: scaleX(0);
-    animation-fill-mode: both;
-  }
-}
-
-    // Header phone
+// Header phone
 
     .restaurant_header {
     position: relative;
@@ -314,11 +258,18 @@
 
     // Partie fonctionnement mobile
 
+    
     .function {
     @include field;
     margin-top: 16px;
     padding: 1rem;
-    background-color: $color-primary;
+    z-index: 1;
+
+    &:hover{
+        box-shadow: 4px 6px 6px $color-third;
+    }
+
+    
 
     &:nth-child(4) {
         background-color: lighten($color: $color-secondary, $amount: 20%);
@@ -392,7 +343,6 @@
                 .far.fa-heart {
                 display: none;
                 }
-
             }
     }
 
@@ -473,8 +423,8 @@
         ul {
         display: flex;
         margin: auto;
-        margin-right: 10px;
-        margin-bottom: 12px;
+        margin-right: 60px;
+        margin-bottom: 25px;
         text-align: left;
         }
     }
@@ -505,6 +455,8 @@
 .restaurant_page {
     width: 100%;
 
+    // headings pages 2 à 5
+
     & h2 {
         padding-left: 12px;
         margin-top: 30px;
@@ -512,16 +464,6 @@
 
     & h3 {
         font-weight: bold;
-    }
-
-    &_figure {
-        width: 100%;
-        z-index: 2;
-        margin: auto;
-    }
-
-    &_overview {
-        width: 100%;
     }
 
     &_heading {
@@ -535,6 +477,20 @@
         position: relative;
         }
     }
+
+    // figure pages 2 à 5
+
+    &_figure {
+        width: 100%;
+        z-index: 2;
+        margin: auto;
+    }
+
+    &_overview {
+        width: 100%;
+    }
+
+// Menu et plats
 
     &_menu{
         background-color: $color-primary;
@@ -558,6 +514,8 @@
         animation: apparition $animation-duration ;
         animation-fill-mode: backwards;
         overflow: hidden;
+
+        // Appariations successives
 
         &:nth-last-child(14) {
         animation-delay: map-get($map: $plate-delay, $key: plate-1);
@@ -642,8 +600,6 @@
             opacity: 0;
         }
 
-   
-
         80%{
             opacity: 0.4;
         }
@@ -653,7 +609,6 @@
             opacity: 1;
         }
     }
-
 
     .restaurant_page_plate:hover .restaurant_page_plate--price {
     transform: translate(-20px);
@@ -676,6 +631,7 @@
     html {
         width: 50%;
         margin: auto;
+        font-size: 1em;
     }
 
     body {
@@ -730,7 +686,7 @@
 
         .like {
         position: absolute;
-        right: 1;
+        margin-right: 4px;
         top: 50%;
         }
     }
@@ -764,6 +720,8 @@
     }
 
     // Page 2/3/4/5 Responsive desktop
+
+ 
 
     .restaurant_page {
         width: 111.1%;
@@ -802,12 +760,14 @@
         &_plate{
 
             &--description {
-                line-height: 30px;
+                line-height: 20px;
             }
 
-            & --price {
+            &--price {
                 line-height: 30px;
                 transform: translateX(70px);
+             
+   
             } 
         }
         
@@ -947,6 +907,7 @@
 
             &--price {
                 transform: translate(80px);
+                margin-top: 30px;
             }
 
             
